@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda de Contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Registar Contatos</h1>
+      </header>
+      <form id="formctt">
+        <input type="text" id="Nome" required placeholder="Nome" />
+        <input
+          type="text"
+          id="Numero"
+          required
+          placeholder="Numero de Contato"
+        />
+        <button type="submit">Cadastrar</button>
+      </form>
+      <table cellspacing="0">
+        <thead>
+          <h2>Lista de Contatos</h2>
+          <tr>
+            <th>Nomes</th>
+            <th>Números de Contatos</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
