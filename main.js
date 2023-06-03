@@ -11,23 +11,25 @@ form.addEventListener("submit", function (e) {
   const inputNome = document.getElementById("Nome");
   const inputNumero = document.getElementById("Numero");
 
-  if (numeros.includes(parseFloat(inputNumero.value))) {
-    alert(`O número ${inputNumero.value} já está na lista.`);
+  const numero = parseFloat(inputNumero.value);
+
+  if (numeros.includes(numero)) {
+    alert(`O número ${numero} já está na lista.`);
   } else {
     nomes.push(inputNome.value);
-    numeros.push(parseFloat(inputNumero.value));
+    numeros.push(numero);
+    
+    let linha = "<tr>";
+    linha += "<td>" + inputNome.value + "</td>";
+    linha += "<td>" + numero + "</td>";
+    linha += "</tr>";
+
+    linhas += linha;
+
+    const corpoTabela = document.querySelector("tbody");
+    corpoTabela.innerHTML = linhas;
+
+    inputNome.value = "";
+    inputNumero.value = "";
   }
-
-  let linha = "<tr>";
-  linha += "<td>" + inputNome.value + "</td>";
-  linha += "<td>" + inputNumero.value + "</td>";
-  linha += "</tr>";
-
-  linhas += linha;
-
-  const corpoTabela = document.querySelector("tbody");
-  corpoTabela.innerHTML = linhas;
-
-  inputNome.value = "";
-  inputNumero.value = "";
 });
