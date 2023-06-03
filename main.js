@@ -1,7 +1,7 @@
 const form = document.getElementById("formctt");
 
-const Nomes = [];
-const Numeros = [];
+const nomes = [];
+const numeros = [];
 
 let linhas = "";
 
